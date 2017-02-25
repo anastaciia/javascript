@@ -1,17 +1,31 @@
-//for (var i = 100; i >= 2; i-=2) {
-    document.write('<br>'+i);
+var userName = prompt('Your name');
+var greet = 'Hello ' + userName;
+document.write(greet);
+
+var age = Number(prompt('Enter youre age'));
+var nextAge = age + 1;
+var msg = '<br>Soon you will be' + nextAge;
+document.write(msg);
+
+var a = Number(prompt('Enter number'));
+var firstAnswer = a;
+var c = Number(prompt('Enter once more'));
+var secondAnswer = c;
+var d = Number(prompt('Again please'));
+var againAnswer = d;
+
+function sum(a, c, d) {
+    var result = a + c + d;
+    return result;
 }
 
-// 100 1 --
+var calcSum = sum(a, c, d);
+document.write(calcSum);
 
-var cats= ['barsik', 'tuzik', 'murchuk'];
-cats.push('pushok');
+var enterNum = Number(prompt('Enter number my friend'));
+var getAnswer = enterNum;
 
-document.write(cats.length[i]);
-document.write('b');
+var squareRoot = Math.sqrt(enterNum);
+document.write(squareRoot);
 
-for (var i = 0; i < cats.length; i++) {
-    
-    document.write(cats.[i]);
-    document.write('<b>');
-}
+
