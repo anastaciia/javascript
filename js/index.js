@@ -1,31 +1,17 @@
-var userName = prompt('Your name');
-var greet = 'Hello ' + userName;
-document.write(greet);
+var position = Number(prompt('Enter number'));
 
-var age = Number(prompt('Enter youre age'));
-var nextAge = age + 1;
-var msg = '<br>Soon you will be' + nextAge;
-document.write(msg);
+function fibonacci(x) {
+    var numbers = [];
 
-var a = Number(prompt('Enter number'));
-var firstAnswer = a;
-var c = Number(prompt('Enter once more'));
-var secondAnswer = c;
-var d = Number(prompt('Again please'));
-var againAnswer = d;
+    numbers[0] = 1;
+    numbers[1] = 1;
 
-function sum(a, c, d) {
-    var result = a + c + d;
-    return result;
+    for (var n = 2; n < x; n++) {
+        numbers[n] = numbers[n - 1] + numbers[n - 2];
+    }
+
+    return numbers[x - 1];
 }
 
-var calcSum = sum(a, c, d);
-document.write(calcSum);
-
-var enterNum = Number(prompt('Enter number my friend'));
-var getAnswer = enterNum;
-
-var squareRoot = Math.sqrt(enterNum);
-document.write(squareRoot);
-
-
+document.write(fibonacci(position) + "<br>");
+document.write(fibonacci(8));
